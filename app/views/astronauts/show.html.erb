@@ -1,0 +1,5 @@
+<%= @astronaut.name %>
+<% @astronaut.missions.each do |mission| %>
+    <%= mission.title %>
+    <%= mission.time_in_space %>
+  <% end %>

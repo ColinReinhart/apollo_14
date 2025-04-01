@@ -76,4 +76,14 @@ RSpec.describe "Astronaut page" do
 
   end
 
+  it 'show page (/astronauts/:id) lists name of astronaut and list of missions' do
+    visit "/astronauts/#{@astronaut2.id}"
+
+    expect(page).to have_content("Neil")
+
+    expect(page).to have_content("Apollo")
+    expect(page).to have_content("Gemini")
+    expect(page).to_not have_content("Capricorn")
+  end
+
 end

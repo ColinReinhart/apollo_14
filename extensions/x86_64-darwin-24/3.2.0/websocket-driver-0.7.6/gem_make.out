@@ -1,0 +1,19 @@
+current directory: /Users/colinreinhart/turing/2Module/ics/apollo_14/gems/websocket-driver-0.7.6/ext/websocket-driver
+/Users/colinreinhart/.rbenv/versions/3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/colinreinhart/turing/2Module/ics/apollo_14/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20250401-41952-sgeuv3 sitelibdir\=./.gem.20250401-41952-sgeuv3 clean
+
+current directory: /Users/colinreinhart/turing/2Module/ics/apollo_14/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20250401-41952-sgeuv3 sitelibdir\=./.gem.20250401-41952-sgeuv3
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.2'
+
+current directory: /Users/colinreinhart/turing/2Module/ics/apollo_14/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20250401-41952-sgeuv3 sitelibdir\=./.gem.20250401-41952-sgeuv3 install
+/usr/local/bin/ginstall -c -m 0755 websocket_mask.bundle ./.gem.20250401-41952-sgeuv3
+
+current directory: /Users/colinreinhart/turing/2Module/ics/apollo_14/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20250401-41952-sgeuv3 sitelibdir\=./.gem.20250401-41952-sgeuv3 clean
