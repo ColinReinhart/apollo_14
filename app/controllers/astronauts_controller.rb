@@ -4,4 +4,8 @@ class AstronautsController < ApplicationController
     @astronauts = Astronaut.all
   end
 
+  def show
+    @astronaut = Astronaut.find(params[:id])
+  end
+
 end
