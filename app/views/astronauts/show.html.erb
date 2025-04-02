@@ -1,5 +1,15 @@
-<%= @astronaut.name %>
-<% @astronaut.missions.each do |mission| %>
-    <%= mission.title %>
-    <%= mission.time_in_space %>
+<h1><%= @astronaut.name %></h1>
+
+<ul>
+  <% @astronaut.missions.each do |mission| %>
+    <li>
+      <strong><%= mission.title %></strong> – <%= mission.time_in_space %> days
+    </li>
   <% end %>
+</ul>
+
+<%= form_with url: astronaut_astronaut_missions_path(@astronaut), method: :post, local: true do |form| %>
+  <%= form.label :mission_id, "Enter Mission ID" %><br>
+  <%= form.number_field :mission_id %><br>
+  <%= form.submit "Add Mission" %>
+<% end %>
