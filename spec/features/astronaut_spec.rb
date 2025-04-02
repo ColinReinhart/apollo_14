@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Astronaut page" do
+  include Rails.application.routes.url_helpers
 
   before(:each) do
     @astronaut1 = Astronaut.create!(name: "Buzz", age: 1, job: "Pilot")
@@ -85,5 +86,21 @@ RSpec.describe "Astronaut page" do
     expect(page).to have_content("Gemini")
     expect(page).to_not have_content("Capricorn")
   end
+
+  it 'show page has form to add missions by mission id' do
+  visit astronaut_path(@astronaut2)
+
+  expect(page).to_not have_content(@mission2.title)
+
+  expect(page).to have_selector("form")
+  expect(page).to have_field("Enter Mission ID")
+  expect(page).to have_button("Add Mission")
+
+  fill_in "Enter Mission ID", with: @mission2.id
+  click_button "Add Mission"
+
+  # expect(current_path).to eq(astronaut_path(@astronaut2))
+  expect(page).to have_content(@mission2.title)
+end
 
 end
